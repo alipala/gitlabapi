@@ -33,8 +33,8 @@ The command provided above will produce a Serenity test report in the `target/si
 After running the tests, it will be provided you a report link automatically. Just click!
 
 ## 6. How to run the test in a CI/CD
-Follow this link below to see the manual workflow. After test execution done, please go to `Artifacts` and download `Full Report`
-to comprehensive report with cool graphs.
+Follow the link below to see the manual workflow. **IMPORTANT NOTE:** After test execution done, please go to `Artifacts` and download `Full Report`
+to comprehensive report with cool graphs. Then find `index.html` file and just click! 
 <a href="https://github.com/alipala/gitlabapi/actions/runs/2424251475/" target="_blank">Sample Workflow Run</a>
 ```
 https://github.com/alipala/gitlabapi/actions/workflows/manual.yml   
