@@ -42,6 +42,11 @@ jobs:
 
       - name: Run Tests
         id: runtest
+        env: # lookup key as an environment variable
+          CLIENT_ID: ${{ secrets.CLIENT_ID }}
+          CLIENT_SECRET: ${{ secrets.CLIENT_SECRET }}
+          GITLAB_PASSWORD: ${{ secrets.GITLAB_PASSWORD }}
+          GITLAB_USERNAME: ${{ secrets.GITLAB_USERNAME }}
         run: mvn install -e --file pom.xml
 
       # After tests run, upload the Single Page Report to the artifactory

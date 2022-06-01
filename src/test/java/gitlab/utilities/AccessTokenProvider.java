@@ -4,18 +4,20 @@ import io.restassured.response.Response;
 import net.serenitybdd.rest.SerenityRest;
 import org.json.JSONObject;
 
+import static java.lang.System.getenv;
+
 /**
  * This class provides Access Token by
  * resource owner Credentials grant type
  */
 public class AccessTokenProvider {
 
-    private static String clientId = "";
-    public static String clientSecret = "2";
+    private static String clientId = getenv("CLIENT_ID");
+    public static String clientSecret = getenv("CLIENT_SECRET");
+    public static String username = getenv("GITLAB_USERNAME");
+    public static String password = getenv("GITLAB_PASSWORD");
     private static String tokenUri = "https://gitlab.com/oauth/token";
     public static String scope = "api";
-    public static String username = "";
-    public static String password = "";
 
     /**
      * This method provides access token based on owner information
