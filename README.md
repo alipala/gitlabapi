@@ -4,7 +4,7 @@
 1. [Introduction](#1-introduction)
 2. [Test Plan](#2-test-plan)
 3. [How to run tests on your local](#3-how-to-run-the-tests-on-your-local)
-4. [View reports](#4-view-reports)
+4. [View reports in your local](#4-view-reports-in-your-local)
 5. [How to run the test in a CI/CD](#5-how-to-run-the-test-in-a-cicd-github)
 6. [Test Environment and Tech Stack](#6-test-environment-and-tech-stack)
 
@@ -28,15 +28,16 @@ https://github.com/alipala/gitlabapi.git
 mvn clean verify
 ```
 
-## 5. View reports
+## 5. View reports in your local
 The command provided above will produce a Serenity test report in the `target/site/serenity/index.html` directory.
 After running the tests, it will be provided you a report link automatically. Just click!
 
 ## 6. How to run the test in a CI/CD
-Follow this link below to see the manual workflow. After test execution done, please go to Artifacts and download Full Report
+Follow this link below to see the manual workflow. After test execution done, please go to `Artifacts` and download `Full Report`
 to comprehensive report with cool graphs.
+<a href="https://github.com/alipala/gitlabapi/actions/runs/2424251475/" target="_blank">Sample Workflow Run</a>
 ```
-https://github.com/alipala/gitlabapi/actions/workflows/manual.yml
+https://github.com/alipala/gitlabapi/actions/workflows/manual.yml   
 ```
 
 ## 7. Test Environment and Tech Stack
