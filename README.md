@@ -1,4 +1,4 @@
-[![Manual Run](https://github.com/alipala/gitlabapi/blob/master/.github/workflows/manual.yml/badge.svg)](https://github.com/alipala/gitlabapi/blob/master/.github/workflows/manual.yml)
+[![Manual Run](https://github.com/alipala/gitlabapi/blob/master/.github/workflows/manual.yml/badge.svg)
 
 # Table of Contents
 1. [Introduction](#1-introduction)
