@@ -5,22 +5,22 @@ import org.json.JSONObject;
 
 public class DataGenerator {
 
-    public static String getRandomEmail() {
-        Faker faker = new Faker();
-        String email = faker.name().firstName().toLowerCase() + faker.random().nextInt(0, 100) + "@test.com";
-        return email;
-    }
-
     public static String getRandomToken() {
         Faker faker = new Faker();
-        String token = faker.gameOfThrones().quote();
+        String token = faker.gameOfThrones().quote().replace(" ", "-");
         return token;
     }
 
-    public static String getRandomUserName() {
+    public static String getRandomMalformedTitle() {
         Faker faker = new Faker();
-        String username = faker.name().username();
-        return username;
+        String title = faker.lorem().fixedString(256);
+        return title;
+    }
+
+    public static String getRandomMalformedIssueId() {
+        Faker faker = new Faker();
+        String issue = faker.lorem().characters(50);
+        return issue;
     }
 
     public static Integer getRandomProjectId() {

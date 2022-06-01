@@ -7,7 +7,7 @@ import org.junit.runner.RunWith;
 @RunWith(CucumberWithSerenity.class)
 @CucumberOptions(
         plugin = {"pretty"},
-        features = {"src/test/resources/features"}
+        features = {"src/test/resources/features/edge/TC007_Destructive_Tests.feature"}
 )
 
 public class TestSuite {

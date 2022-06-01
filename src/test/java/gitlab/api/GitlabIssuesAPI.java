@@ -49,6 +49,17 @@ public class GitlabIssuesAPI {
                 .get(SINGLE_ISSUE_BY_QUERY_PARAMETER);
     }
 
+    @Step("Get invalid issue request by id {0} and project {1}")
+    public void getInvalidIssueRequestByProject(String issueId, Integer projectId, String accessToken) {
+        SerenityRest.given().auth().preemptive().oauth2(accessToken)
+                .contentType(ContentType.JSON)
+                .when()
+                .pathParam("issue", issueId)
+                .pathParam("projects", projectId)
+                .log().all()
+                .get(SINGLE_ISSUE_BY_PROJECT);
+    }
+
     @Step("Create issue by project {0}")
     public void addIssueByProject(Integer projectId, String accessToken, String payload) {
         SerenityRest.given().auth().preemptive().oauth2(accessToken)
