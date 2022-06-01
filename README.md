@@ -36,9 +36,15 @@ After running the tests, it will be provided you a report link automatically. Ju
 Follow the link below to see the manual workflow. **IMPORTANT NOTE:** After test execution done, please go to `Artifacts` and download `Full Report`
 to comprehensive report with cool graphs. Then find `index.html` file and just click! 
 <a href="https://github.com/alipala/gitlabapi/actions/runs/2424251475/" target="_blank">Sample Workflow Run</a>
+
+`See Sample Report` 
+
+https://user-images.githubusercontent.com/16635008/171510272-86db1d88-083a-47a9-88e1-a9cf4e9fa5a8.mp4
+
 ```
 https://github.com/alipala/gitlabapi/actions/workflows/manual.yml   
 ```
+
 
 ## 7. Test Environment and Tech Stack
 * Gitlab Issue API
