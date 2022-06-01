@@ -34,7 +34,8 @@ public class TC006_Schema_Validation {
 
     @Then("request should be valid")
     public void request_should_be_valid() {
-        restAssuredThat(response -> response.body(JsonSchemaValidator.matchesJsonSchemaInClasspath("schema.json")));
+        restAssuredThat(response -> response.body(
+                JsonSchemaValidator.matchesJsonSchemaInClasspath("schema.json")));
     }
 
 }
