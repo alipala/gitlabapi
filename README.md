@@ -15,7 +15,7 @@ GitHub Runners used as a CI/CD. After tests completed, Serenity BDD creates fanc
 full report contains test automation graphs, the other one is single page report.
 
 ## 3. Test Plan
-All details about the object, approach, features to be tested and more in [Test Plan](docs/test_plan.md)
+All details about the object, approach, features to be tested and more in [Test Plan](src/test/resources/docs/test_plan.md)
 
 ## 4. How to run test in your local
 1. Clone the repository
