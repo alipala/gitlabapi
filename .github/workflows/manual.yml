@@ -1,0 +1,77 @@
+name: Manual Run
+on:
+  workflow_dispatch:
+    inputs:
+      name:
+        description: Put email(s)
+        required: false
+        default: '@gmail.com'
+
+# Job lists of the workflow
+# This job requires the OS to be run as follows
+# It also starts to install JDK before tests
+
+jobs:
+  Test:
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set up JDK 17
+        id: jdk
+        uses: actions/setup-java@v3
+        with:
+          distribution: 'zulu'
+          java-version: '17'
+          check-latest: true
+
+      # Setup maven because the test project is a maven project
+      - name: Setup Maven
+        id: maven
+        uses: stCarolas/setup-maven@v4.2
+        with:
+          maven-version: '3.8.4'
+
+      # Cache the maven packages to make the run fast
+      - name: Cache the Maven packages
+        id: cache_maven
+        uses: actions/cache@v1
+        with:
+          path: ~/.m2
+          key: ${{ runner.os }}-m2-${{ hashFiles('**/pom.xml') }}
+          restore-keys: ${{ runner.os }}-m2
+
+      - name: Run Tests
+        id: runtest
+        run: mvn install -e --file pom.xml
+
+      # After tests run, upload the Single Page Report to the artifactory
+      - name: Single Page Report
+        if: always()
+        id: singlepagereport
+        uses: actions/upload-artifact@v3
+        with:
+          name: single_page_report
+          path: ${{ github.workspace }}/target/site/serenity/serenity-summary.html
+
+      - name: Upload Full Test Report
+        if: always()
+        uses: actions/upload-artifact@v3
+        with:
+          name: Full Report
+          path: ${{ github.workspace }}/target/site/serenity
+
+  Report:
+    if: always()
+    needs: Test
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Download Artifact
+        uses: actions/download-artifact@v3
+        with:
+          name: single_page_report
+        continue-on-error: true
+
+      - name: Test artifact download
+        run: ls -R
+        continue-on-error: true
+
