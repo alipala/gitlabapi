@@ -47,6 +47,8 @@ https://github.com/alipala/gitlabapi/actions/workflows/manual.yml
 ```
 
 ## 6. Automated Zephyr Test Result Publishing
+The solution automatically update the test results stored in Zephyr Scale test management tool.
+There is an integration between TA and Zephyr Scale using Zephyr Rest Client API
 
 > ![Overall Tests](src/test/resources/docs/Zephyr-1.png?raw=true)
 > ![Individual Test](src/test/resources/docs/Zephyr-2.png?raw=true)
