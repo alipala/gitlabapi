@@ -36,7 +36,7 @@ To verify the requirements which I specified in the "Tested Feautures" have been
 Also to validate whether test object works as the user expects.
 
 # 6. Test Model
-The functional tests in this project follow "Arrange-Act-Assert" model:
+The functional tests in this project follow "Arrange-Act-Assert" zephyr.model:
 
 * Arrange, or set up: Pre conditions for the test
 * Act: Calling controller functions or methods

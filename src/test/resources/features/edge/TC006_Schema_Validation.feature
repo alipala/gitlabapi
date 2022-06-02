@@ -1,3 +1,4 @@
+@DAV-T6
 Feature: JSON Schema Validation
 
   Scenario: Schema should be valid

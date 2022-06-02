@@ -1,3 +1,4 @@
+@DAV-T3
 Feature: List authenticated user issues
 
   Background:
