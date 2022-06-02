@@ -48,8 +48,8 @@ https://github.com/alipala/gitlabapi/actions/workflows/manual.yml
 
 ## 6. Automated Zephyr Test Result Publishing
 
-> ![Overall Tests](https://github.com/alipala/gitlabapi/tree/master/src/test/resources/docs/Zephyr-1?raw=true)
-> ![Individual Test](https://github.com/alipala/gitlabapi/tree/master/src/test/resources/docs/Zephyr-2?raw=true)
+> ![Overall Tests](src/test/resources/docs/Zephyr-1.png?raw=true)
+> ![Individual Test](src/test/resources/docs/Zephyr-2.png?raw=true)
 
 ## 7. Test Environment and Tech Stack
 * Gitlab Issue API
