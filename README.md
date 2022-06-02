@@ -6,7 +6,8 @@
 3. [How to run tests on your local](#3-how-to-run-the-tests-on-your-local)
 4. [View reports in your local](#4-view-reports-in-your-local)
 5. [How to run the test in a CI/CD](#5-how-to-run-the-test-in-a-cicd-github)
-6. [Test Environment and Tech Stack](#6-test-environment-and-tech-stack)
+6. [Automated Zephyr Test Result Publishing](#6-automated-zephyr-test-result-publishing)
+7. [Test Environment and Tech Stack](#7-test-environment-and-tech-stack)
 
 ## 1. Introduction
 This repository is a demonstration of how GitLab Issues API tested.
@@ -14,10 +15,10 @@ It includes Serenity BDD with Rest Assured and Cucumber integration for putting 
 GitHub Runners used as a CI/CD. After tests completed, Serenity BDD creates fancy reports. One of them
 full report contains test automation graphs, the other one is single page report.
 
-## 3. Test Plan
+## 2. Test Plan
 All details about the object, approach, features to be tested and more in [Test Plan](src/test/resources/docs/test_plan.md)
 
-## 4. How to run test in your local
+## 3. How to run test in your local
 1. Clone the repository
 ```
 https://github.com/alipala/gitlabapi.git
@@ -28,11 +29,11 @@ https://github.com/alipala/gitlabapi.git
 mvn clean verify
 ```
 
-## 5. View reports in your local
+## 4. View reports in your local
 The command provided above will produce a Serenity test report in the `target/site/serenity/index.html` directory.
 After running the tests, it will be provided you a report link automatically. Just click!
 
-## 6. How to run the test in a CI/CD
+## 5. How to run the test in a CI/CD
 Follow the link below to see the manual workflow. **IMPORTANT NOTE:** After test execution done, please go to `Artifacts` and download `Full Report`
 to comprehensive report with cool graphs. Then find `index.html` file and just click! 
 <a href="https://github.com/alipala/gitlabapi/actions/runs/2424251475/" target="_blank">Sample Workflow Run</a>
@@ -45,6 +46,10 @@ https://user-images.githubusercontent.com/16635008/171510272-86db1d88-083a-47a9-
 https://github.com/alipala/gitlabapi/actions/workflows/manual.yml   
 ```
 
+## 6. Automated Zephyr Test Result Publishing
+
+> ![Overall Tests](https://github.com/alipala/gitlabapi/tree/master/src/test/resources/docs/Zephyr-1?raw=true)
+> ![Individual Test](https://github.com/alipala/gitlabapi/tree/master/src/test/resources/docs/Zephyr-2?raw=true)
 
 ## 7. Test Environment and Tech Stack
 * Gitlab Issue API
