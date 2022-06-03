@@ -21,8 +21,8 @@ public class TC001_Create_Issue {
     @Steps
     GitlabIssuesAPI gitlab;
 
-    private static final String TITLE = "TOOLSQA-Test";
-    private static final String DESCRIPTION = "TOOLSQA-Test";
+    private static final String TITLE = "Sample Test Title";
+    private static final String DESCRIPTION = "Sample Test Description";
     private static final Integer  ASSIGNEE_ID = 4464677;
     private static final String ISSUE_TYPE = "incident";
     private static final String DUE_DATE = "2022-11-30";
