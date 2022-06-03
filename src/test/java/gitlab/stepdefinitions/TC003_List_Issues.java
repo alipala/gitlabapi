@@ -30,10 +30,10 @@ public class TC003_List_Issues {
         gitlab.getAllIssues(token);
     }
 
-    @Then("issues belong to user are returned")
-    public void issues_belong_to_user_are_returned() {
+    @Then("issues belong to user are returned {int}")
+    public void issues_belong_to_user_are_returned(Integer noIssue) {
         restAssuredThat(response -> response.statusCode(HttpStatus.SC_OK));
-        restAssuredThat(response -> response.body("iid.size()", equalTo(16))); // number of issue belongs to admin
+        restAssuredThat(response -> response.body("iid.size()", equalTo(noIssue))); // number of issue belongs to admin
     }
 
     @When("user wants to get issue in project {int} by {string} equals {string}")
